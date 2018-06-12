@@ -1,0 +1,52 @@
+﻿// Configure bundling and minification for the project.
+// More info at https://go.microsoft.com/fwlink/?LinkId=808241
+[
+  {
+    "outputFileName": "wwwroot/css/shortcodes/myShortcodes.min.css",
+    // An array of relative input file paths. Globbing patterns supported
+    "inputFiles": [
+      "wwwroot/css/shortcodes/bundle.css",
+      "wwwroot/css/shortcodes/header.css",
+      "wwwroot/css/shortcodes/slider.css",
+      "wwwroot/css/shortcodes/shop.css",
+      "wwwroot/css/shortcodes/footer.css",
+      "wwwroot/css/shortcodes/modal.css"    
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/mySite.min.css",
+    // An array of relative input file paths. Globbing patterns supported
+    "inputFiles": [
+      "wwwroot/css/pe-icon-7-stroke.css",
+      "wwwroot/css/meanmenu.css",
+      "wwwroot/css/style.css",
+      "wwwroot/css/responsive.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.min.js",
+    "inputFiles": [
+      "wwwroot/lib/jquery/dist/jquery.js",
+      "wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "wwwroot/js/vendor/modernizr-2.8.3.min.js",
+      "wwwroot/js/vendor/jquery-1.12.0.min.js",
+      "wwwroot/js/bootstrap.min.js",
+      "wwwroot/js/jquery.counterup.min.js",
+      "wwwroot/js/jquery.meanmenu.js",
+      "wwwroot/js/owl.carousel.min.js",
+      "wwwroot/js/isotope.pkgd.min.js",
+      "wwwroot/js/imagesloaded.pkgd.min.js",
+      "wwwroot/js/waypoints.min.js",
+      "wwwroot/js/plugins.js",
+      "wwwroot/js/main.js"
+
+    ],
+    // Optionally specify minification options
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    // Optionally generate .map file
+    "sourceMap": false
+  }
+]

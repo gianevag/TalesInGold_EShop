@@ -1,0 +1,76 @@
+﻿@model IEnumerable<TalesInGold_EShop.Models.Jewelry>
+
+<!-- slider start -->
+<div class="slider-area text-center">
+<div class="container-fluid">
+    <div class="slider-active">
+        <div class="single-slider slider-opacity ptb-250" style="background-image: url(/img/bg/4.jpg">
+            <div class="slider-text">
+                <h2>summer Collection 2017 </h2>
+                <h3>A good looking, comfortable traditional collection</h3>
+                <a href="shop.html">Shop The Collection</a>
+            </div>
+        </div>
+        <div class="single-slider slider-opacity ptb-250" style="background-image: url(/img/bg/1.jpg">
+            <div class="slider-text">
+                <h2>Top Collection 2017</h2>
+                <h3>A good looking, comfortable traditional collection</h3>
+                <a href="shop.html">Shop The Collection</a>
+            </div>
+        </div>
+        <div class="single-slider slider-opacity ptb-250" style="background-image: url(assets/img/bg/3.jpg">
+            <div class="slider-text">
+                <h2>summer Collection 2017</h2>
+                <h3>A good looking, comfortable traditional collection</h3>
+                <a href="shop.html">Shop The Collection</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- slider end -->
+<!-- shop area start -->
+<div class="shop-area ptb-90">
+    <div class="container-fluid">
+        <div class="section-title text-center">
+            <h3>Featured Products</h3>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+        </div>      
+        <div class="shop-style-all">
+            <div class="row">
+                <div class="grid">
+                    @foreach (var jewel in Model)
+                    {
+                    <div class="col-md-3 col-sm-6 col-xs-12 grid-item cat2">
+                        <div class="shop hover-style mb-30">
+                            <div class="shop-img">
+                                <div class="shop-single-img">
+                                    <a href= @("/home/jewelry/"+ @jewel.Id) >
+                                            
+                                        <div class="thumb-first">
+                                            <img src= @("/img/shop/" + @jewel.first_thumb_photo + ".jpg") alt="" />
+                                        </div>
+                                        
+                                        <div class="thumb-second">
+                                            <img src= @("/img/shop/" + @jewel.second_thumb_photo + ".jpg") alt="" />
+                                        </div>
+                                            
+                                    </a>
+                                </div>                              
+                                <div class="title-style-3 text-center">
+                                    <h3><a href="#"> @jewel.Title </a></h3>
+                                    <span class="new-price"> @jewel.Price </span>
+                                    <!--<span class="old-price">$70</span>-->
+                                </div>                                                                
+                            </div>                          
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>  
+        </div>
+        <div class="view-more text-center mt-30">
+            <a href="/home/Jeweleries">view more</a>
+        </div>
+    </div>
+</div>          

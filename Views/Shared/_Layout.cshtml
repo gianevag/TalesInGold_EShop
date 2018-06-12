@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html >
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Tales In Gold -  Fine Jewelry</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="~/css/pe-icon-7-stroke.css">
+        <link rel="stylesheet" href="~/css/font-awesome.min.css">
+        <link rel="stylesheet" href="~/css/meanmenu.css">
+        <link rel="stylesheet" href="~/css/shortcodes/shortcode.css">
+        <link rel="stylesheet" href="~/css/style.css">
+        <link rel="stylesheet" href="~/css/responsive.css">
+        <link rel="stylesheet" href="~/css/site.css">
+    </environment>
+        
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/shortcodes/myShortcodes.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/mySite.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="~/css/font-awesome.min.css">          
+    </environment>
+
+</head>
+<body>
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Add your site or application content here -->
+    <div class="waraper">
+           <header>
+                <div class="header-area">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-4 col-xs-4">
+                                <div class="logo">
+                                    <a href="/"><img src="/img/logo/logo.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-4  col-xs-2 text-center">
+                                <div class="main-menu display-inline">
+                                    <nav>
+                                        <ul class="menu">
+                                            <li><a href="/">HOME </a></li>
+                                            <li><a href="/home/about">ABOUT US</a></li>
+                                            <li><a href="/home/Jeweleries">Jewelry<i class="pe-7s-angle-down"></i></a>
+                                                <ul>
+                                                    <li><a href="/home/gallery/necklaces">Necklaces</a>
+                                                    </li>
+                                                    <li><a href="/home/gallery/earrings">Earrings</a>
+                                                        <ul>
+                                                            <li><a href="/home/gallery/earrings/studs">Studs</a></li>
+                                                            <li><a href="/home/gallery/earrings/threader">Threader & Long</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="/home/gallery/rings">Rings</a></li>                                                    
+                                                    <li><a href="/home/gallery/bracelets">Bracelets</a></li>
+                                                    <li><a href="/home/gallery/personalized">Personalized Jewelry</a>
+                                                        <ul>
+                                                            <li><a href="/home/gallery/personalized/necklaces">Necklaces</a></li>
+                                                            <li><a href="/home/gallery/personalized/bracelets">Bracelets</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="/home/gallery/birthstone">Birthstone Jewelry</a>
+                                                        <ul>
+                                                            <li><a href="/home/gallery/birthstone/necklaces">Necklaces</a></li>
+                                                            <li><a href="/home/gallery/birthstone/earrings">Earrings</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="/home/gallery/diamond">Diamond Jewelry</a>
+                                                        <ul>
+                                                            <li><a href="/home/gallery/diamond/necklaces">Necklaces</a></li>
+                                                            <li><a href="/home/gallery/diamond/earrings">Earrings</a></li>
+                                                            <li><a href="/home/gallery/diamond/rings">Rings</a></li>
+                                                            <li><a href="/home/gallery/diamond/bracelets">Bracelets</a></li>                                                           
+                                                        </ul>
+                                                    </li>                                                                                                                                                              
+                                                    <li><a href="/home/gallery/all">all</a></li>
+                                                </ul>
+                                            </li>
+                                            <!-- <li><a href="/home/news">NEWS</a></li> -->
+                                            <li><a href="/home/contact">CONTACT</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6 text-right text-sm text-res">
+                                <div class="cart-user-language">
+                                    <div class="user">
+                                    <a href="https://www.pinterest.com/talesingold"><i class="fa fa-pinterest"></i></a>
+                                    </div>
+                                    <div class="user">
+                                    <a href="https://www.instagram.com/talesingold"><i class="fa fa-instagram"></i></a>
+                                    </div>
+                                    <div class="user">
+                                    <a href="https://www.facebook.com/talesingold.finejewelry"><i class="fa fa-facebook"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                </div>
+            </header>
+
+        @RenderBody()
+            
+        <hr />
+            
+<footer class="footer-area">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-sm-4">
+                <div class="footer-logo">
+                    <a href="#"><img src="/img/logo/logo.png" alt=""></a>
+                    <p>Lorem ipsum dolor sit amet tempor, consectetur adipisicing.</p>
+                    <ul>
+                        <li><a href="https://www.pinterest.com/talesingold"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/talesingold"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://www.facebook.com/talesingold.finejewelry"><i class="fa fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-8">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4 col-xs-6">
+                        <div class="footer-title res-mrg">
+                            <h3>categories</h3>
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href="shop.html">Clothing</a></li>
+                                    <li><a href="shop.html">Shoes</a></li>
+                                    <li><a href="shop.html">Watches</a></li>
+                                    <li><a href="shop.html">Jewelry</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-4 col-xs-6">
+                        <div class="footer-title res-mrg">
+                            <h3>Quick Links</h3>
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href="login.html">Login</a></li>
+                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                    <li><a href="cart.html">My Cart</a></li>
+                                    <li><a href="checkout.html">Checkout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="footer-bottom text-center ptb-20">
+            <p>
+                © 2017
+                <a href="https://devitems.com/" target="_blank">DevItems</a>
+                . All Rights Reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+    </div>
+
+    <environment include="Development">
+       <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="~/js/vendor/jquery-1.12.0.min.js"></script>
+        <script src="~/js/bootstrap.min.js"></script>
+        <script src="~/js/jquery.counterup.min.js"></script>
+        <script src="~/js/jquery.meanmenu.js"></script>
+        <script src="~/js/owl.carousel.min.js"></script>
+        <script src="~/js/isotope.pkgd.min.js"></script>
+        <script src="~/js/imagesloaded.pkgd.min.js"></script>
+        <script src="~/js/waypoints.min.js"></script>
+        <script src="~/js/plugins.js"></script>
+        <script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+        <script src="~/js/main.js"></script>
+
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+
+        <!-- google map api -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_qDiT4MyM7IxaGPbQyLnMjVUsJck02N0"></script>  
+        <script src="~/js/site.js"></script>
+        <!-- lazy loading api and use it to main.js  -->
+        <script type="text/javascript" src="~/js/jquery.lazy.min.js"></script>    
+   </environment>
+        
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+       <script src="~/js/site.min.js" asp-append-version="true"></script>
+       <script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+
+        <!-- For asp validators -->
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+
+        <!-- google map api -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_qDiT4MyM7IxaGPbQyLnMjVUsJck02N0"></script>  
+        <script src="~/js/site.js"></script>
+
+        <!-- lazy loading api and use it to main.js  -->
+        <script type="text/javascript" src="~/js/jquery.lazy.min.js"></script>      
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

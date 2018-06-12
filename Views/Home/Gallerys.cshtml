@@ -1,0 +1,97 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+
+
+@model IEnumerable<TalesInGold_EShop.Models.Jewelry>
+
+            <!-- breadcrumb start -->
+            <div class="breadcrumb-area">
+                <div class="container-fluid text-center">
+                    <div class="breadcrumb-stye gray-bg ptb-100">
+                        <h2 class="page-title">shop page</h2>
+                        <ul>
+                            <li><a href="/">home</a></li>
+                            <li><a href="/home/Jeweleries">Jewelry</a></li>
+                            @{var ln = ViewBag.Collections.Length;}
+                            @{var ctr = 0;}
+                            @foreach(var list in ViewBag.Collections)
+                                {
+                                            
+                                    if(ctr+1 != ln)
+                                    {
+                                        <li><a href = @("/home/gallery/"+ @ViewBag.UrlCollections[ctr]) >@list</a></li>
+                                    }
+                                    else
+                                    {
+                                        <li class="active">@list</li>
+                                    }
+                                    
+                                ctr += 1; 
+
+                                }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- breadcrumb end -->
+
+            <!-- shop area start -->
+            <div class="shop-area pt-100 pb-70" >
+                <div class="container-fluid">
+                    <div class="shop-title-text text-center">
+                        <h2>awesome collection 2017 </h2> 
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                    </div>      
+                    <div class="shop-style-all mt-50">
+                        <div class="row">
+                            @{string classItem = "col-md-3";}
+                            @{var counter = 0;}
+                
+                            <div class="grid">
+                             @foreach(var jewel in Model)
+                                {
+                                counter += 1; 
+                                if (counter == 3 || counter == 4){
+                                    classItem = "col-md-3";
+                                }
+                                else if(counter == 6){
+                                    counter = 0;
+                                    classItem = "col-md-3"; 
+                                }
+                                else {
+                                    classItem = "col-md-3";                                     
+                                }
+                                  <div class= "col-md-3 col-xs-12 grid-item cat1">
+                                    <div class="shop hover-style mb-30">
+                                        <div class="shop-img" >
+                                            <div class="shop-single-img">
+                                                <a href= @("/home/jewelry/"+ @jewel.Id) >
+                                                    <div id="lazy_main" class="thumb-first">
+                                                        <img src="/img/shop/btg-14aa-R.jpg" data-src= @("/img/shop/" + @jewel.first_thumb_photo + ".jpg")  />
+                                                    </div>
+                                                    
+                                                    <div id="lazy_main" class="thumb-second lazyload">
+                                                        <img  src="/img/shop/btg-14aa-R.jpg"  data-src= @("/img/shop/" + @jewel.second_thumb_photo + ".jpg")  />
+                                                    </div>
+                                                </a>
+                                                </div>  
+                                                <div class="shop-title title-style-3">
+                                                    <h3><a href="#"> @jewel.Title </a></h3>
+                                                    <span class="new-price"> $@jewel.Price </span>
+                                                    <!--<span class="old-price">$70</span>-->
+                                                </div>    
+                                        </div>                          
+                                    </div>
+                                </div>
+                                }
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>  
+
