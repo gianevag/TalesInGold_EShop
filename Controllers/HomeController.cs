@@ -55,7 +55,7 @@ namespace TalesInGold_EShop.Controllers
             return View("Gallerys", _jewel);
         }
 
-        [HttpGet("home/Jeweleries")]
+        [HttpGet("home/Jewelry")]
         public IActionResult Getegory()
         {
             return View("jewelryGategory");
