@@ -29,7 +29,7 @@ namespace TalesInGold_EShop.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            var _jewel = _context.JewelriesLinq.AsQueryable().OrderBy(x => x.orderInFirstPage).Take(4);
+            var _jewel = _context.JewelriesLinq.AsQueryable().Where(x => x.isFirstPage == 1 ).OrderBy(x => x.orderInFirstPage).Take(4);
             //var _jewel = _context.JewelriesLinq.AsQueryable().Take(4);
             return View("Index", _jewel);
         }
