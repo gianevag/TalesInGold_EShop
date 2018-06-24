@@ -8,6 +8,7 @@
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
     <PackageReference Include="BuildBundlerMinifier" Version="2.6.362" />
     <PackageReference Include="MongoDB.Driver" Version="2.5.0" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="1.1.0" />
     <PackageReference Include="System.Net.Mail.Abstractions" Version="1.0.8" />
   </ItemGroup>
 

@@ -12,3 +12,4 @@ wwwroot/.DS_Store
 /Views/.DS_Store
 wwwroot/css/.DS_Store
 wwwroot/js/.DS_Store
+/logs/
