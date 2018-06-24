@@ -6,18 +6,25 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Internal;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Hosting;
 
 namespace TalesInGold_EShop
 {
     public class RequestResponseLoggingMiddleware
     {
+        private string PathFormat = "logs/TIG.log";
         private readonly RequestDelegate _next;
         private readonly ILogger _logger;
 
         public RequestResponseLoggingMiddleware(RequestDelegate next,
-                                                ILoggerFactory loggerFactory)
+                                                ILoggerFactory loggerFactory,
+                                                IHostingEnvironment env)
         {
-            loggerFactory.AddFile("./logs/TIG.log");
+            if (!env.IsDevelopment()){
+                PathFormat = "/home/gianevag/logs/TIG/TIG.log";
+            }
+
+            loggerFactory.AddFile(PathFormat);
             _next = next;
             _logger = loggerFactory
                       .CreateLogger<RequestResponseLoggingMiddleware>();
