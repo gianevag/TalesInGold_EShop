@@ -21,7 +21,7 @@ namespace TalesInGold_EShop
                                                 IHostingEnvironment env)
         {
             if (!env.IsDevelopment()){
-                PathFormat = "/home/gianevag/logs/TIG/TIG.log";
+                PathFormat = "logs/TIG/TIG.log";
             }
 
             loggerFactory.AddFile(PathFormat);
@@ -32,6 +32,7 @@ namespace TalesInGold_EShop
 
         public async Task Invoke(HttpContext context)
         {
+            
             _logger.LogInformation(await FormatRequest(context.Request));
 
             await _next(context);
